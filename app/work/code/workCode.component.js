@@ -2,34 +2,32 @@
     'use strict';
 
     angular
-        .module('myApp.header')
-        .component('appHeader', appHeader());
+        .module('myApp.work')
+        .component('appWorkCode', appWorkCode());
 
-    function appHeader() {
+    function appWorkCode() {
         var directive = {
-            controller: HeaderController,
+            controller: WorkCodeController,
+            templateUrl: 'app/work/code/workCode.html',
             controllerAs: 'vm',
-            templateUrl: 'app/header/header.html',
             restrict: 'E',
             bindings: {
                 name: '='
             }
         };
-
         return directive;
     }
 
-    HeaderController.$inject = [];
+    WorkCodeController.$inject = [];
 
-    function HeaderController() {
+    function WorkCodeController() {
         var vm = this;
 
-        vm.title = 'HeaderController';
+        vm.title = 'WorkCodeController';
 
         activate();
 
         function activate() {
-         
         }
     }
 })();

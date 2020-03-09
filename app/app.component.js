@@ -16,12 +16,10 @@
         return directive;
     }
 
-    AppController.$inject = ['$scope'];
+    AppController.$inject = [];
 
-    function AppController($scope) {
+    function AppController() {
         var vm = this;
-
-        console.log($scope);
         
         vm.title = 'AppController';
 

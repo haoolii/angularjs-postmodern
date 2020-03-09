@@ -2,14 +2,14 @@
     'use strict';
 
     angular
-        .module('myApp.header')
-        .component('appHeader', appHeader());
+        .module('myApp.work')
+        .component('appWork', appWork());
 
-    function appHeader() {
+    function appWork() {
         var directive = {
-            controller: HeaderController,
+            controller: WorkController,
+            templateUrl: 'app/work/work.html',
             controllerAs: 'vm',
-            templateUrl: 'app/header/header.html',
             restrict: 'E',
             bindings: {
                 name: '='
@@ -19,17 +19,16 @@
         return directive;
     }
 
-    HeaderController.$inject = [];
+    WorkController.$inject = [];
 
-    function HeaderController() {
+    function WorkController() {
         var vm = this;
 
-        vm.title = 'HeaderController';
+        vm.title = 'WorkController';
 
         activate();
 
         function activate() {
-         
         }
     }
 })();
